@@ -1,0 +1,11 @@
+USE `catalog`;
+
+--
+-- Dumping data for table `client_information`
+--
+
+LOCK TABLES `client_information` WRITE;
+/*!40000 ALTER TABLE `client_information` DISABLE KEYS */;
+INSERT INTO `client_information` VALUES ('client_f171470c-3af9-4fc5-9c29-ea07e81cc094','NA','Client','testClient','testClient',0,1519642526402,1519642526402,'Sys','Sys'),('client_info_1513077755','NA','Client','siriusxm','siriusxm',0,1513077755,1513077755,'Manual','Manual'),('client_info_1513077756','client_info_1513077755','Account','siriusxm','siriusxm',1,1513077756,1513077756,'Manual','Manual'),('client_info_1513077757','NA','Client','dish','dish',0,1513077756,1513077756,'Manual','Manual'),('client_info_1513077758','client_info_1513077757','HDFSFolder','dish','dish',2,1513077756,1513077756,'Manual','Manual'),('client_info_1513077759','client_info_1513077757','HDFSFolder','nemo-client-dish','nemo-client-dish',3,1513077756,1513077756,'Manual','Manual'),('client_info_1513077760','client_info_1513077757','Account','dish','dish',1,1513077756,1513077756,'Manual','Manual'),('client_info_1513077761','NA','Client','dummy','dummy',0,1513077756,1513077756,'Manual','Manual'),('client_info_1513077762','client_info_1513077761','HDFSFolder','dummy','dummy',2,1513077756,1513077756,'Manual','Manual'),('client_info_1513077763','client_info_1513077761','HDFSFolder','nemo-client-dummy','nemo-client-dummy',3,1513077756,1513077756,'Manual','Manual'),('client_info_1513077764','client_info_1513077761','Account','dummy','dummy',1,1513077756,1513077756,'Manual','Manual'),('client_info_1600000000','NA','Client','searsholdings','searsholdings',0,1513077756,1513077756,'Emil','Emil'),('client_info_1600000001','client_info_1600000000','Account','searsonline','searsonline',1,1513077756,1513077756,'Emil','Emil'),('client_info_1600000002','client_info_1600000001','HDFSFolder','staging/nemo-client-searsholdings','Assist client nemo-client-searsholdings',0,1513077756,1513077756,'Emil','Emil'),('client_info_1600000003','client_info_1600000001','HDFSFolder','searsonline','IDM client searsonline',0,1513077756,1513077756,'Emil','Emil');
+/*!40000 ALTER TABLE `client_information` ENABLE KEYS */;
+UNLOCK TABLES;

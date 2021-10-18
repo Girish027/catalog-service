@@ -1,0 +1,33 @@
+<configuration>
+
+    <property name="charset" value="UTF-8"/>
+    <property name="pattern" value="%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n"/>
+
+    <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>C:/dp2/catalog-service.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>C:/dp2/logs/catalog-service_%d{yyyy-MM-dd}.%i.log</fileNamePattern>
+            <timeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+                <maxFileSize>5MB</maxFileSize>
+            </timeBasedFileNamingAndTriggeringPolicy>
+            <maxHistory>30</maxHistory>
+        </rollingPolicy>
+        <encoder>
+            <charset>${charset}</charset>
+            <pattern>${pattern}</pattern>
+        </encoder>
+    </appender>
+
+    <!-- show hibernate sql with debug -->
+    <logger name="org.hibernate.SQL" level="info"/>
+    <!-- show bound hibernate parameters with trace -->
+    <logger name="org.hibernate.type" level="info"/>
+
+    <logger name="org.springframework.web" level="info"/>
+
+    <logger name="com.tfs.dp2" level="debug"/>
+
+    <root level="warn">
+        <appender-ref ref="FILE"/>
+    </root>
+</configuration>

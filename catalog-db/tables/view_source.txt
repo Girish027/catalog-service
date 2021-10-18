@@ -1,0 +1,25 @@
+USE `catalog`;
+
+--
+-- Table structure for table `view_source`
+--
+
+DROP TABLE IF EXISTS `view_source`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `view_source` (
+  `source_id` varchar(50) NOT NULL,
+  `source_view_id` varchar(50) DEFAULT NULL,
+  `view_id` varchar(50) DEFAULT NULL,
+  `source_type` varchar(50) NOT NULL COMMENT '"IDM","XML","CSV","View"',
+  `source_order` int(11) DEFAULT NULL,
+  `final_view_id` varchar(50) DEFAULT NULL,
+  `data_range_start_min` int(11) DEFAULT NULL,
+  `data_range_end_min` int(11) DEFAULT NULL,
+  `created_unixtimestamps` bigint(13) DEFAULT NULL,
+  `modified_unixtimestamps` bigint(13) DEFAULT NULL,
+  `created_by` varchar(50) DEFAULT NULL,
+  `modified_by` varchar(50) DEFAULT NULL,
+  PRIMARY KEY (`source_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;

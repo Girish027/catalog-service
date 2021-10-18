@@ -1,0 +1,21 @@
+USE `catalog`;
+
+--
+-- Table structure for table `view_hdfs_source`
+--
+
+DROP TABLE IF EXISTS `view_hdfs_source`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `view_hdfs_source` (
+  `HDFS_source_id` varchar(50) NOT NULL,
+  `HDFS_source_view_id` varchar(50) DEFAULT NULL,
+  `view_id` varchar(50) DEFAULT NULL,
+  `HDFS_path` varchar(2500) DEFAULT NULL,
+  `created_unixtimestamps` bigint(13) DEFAULT NULL,
+  `modified_unixtimestamps` bigint(13) DEFAULT NULL,
+  `created_by` varchar(50) DEFAULT NULL,
+  `modified_by` varchar(50) DEFAULT NULL,
+  PRIMARY KEY (`HDFS_source_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;

@@ -1,0 +1,28 @@
+USE `catalog`;
+
+--
+-- Table structure for table `druid_ingestion_data`
+--
+
+DROP TABLE IF EXISTS `druid_ingestion_data`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `druid_ingestion_data` (
+  `parser_type` varchar(50) DEFAULT NULL,
+  `druid_ingestion_id` varchar(50) NOT NULL,
+  `view_id` varchar(50) NOT NULL,
+  `druid_index_spec_type` varchar(50) DEFAULT NULL,
+  `io_config_type` varchar(50) DEFAULT NULL,
+  `query_granularity` varchar(50) DEFAULT NULL,
+  `segment_granularity` varchar(50) DEFAULT NULL,
+  `granularity_type` varchar(50) DEFAULT NULL,
+  `input_spec_type` varchar(50) DEFAULT NULL,
+  `timestamp_format` varchar(50) DEFAULT NULL,
+  `parser_spec_format` varchar(50) DEFAULT NULL,
+  `created_unixtimestamps` bigint(13) DEFAULT NULL,
+  `modified_unixtimestamps` bigint(13) DEFAULT NULL,
+  `created_by` varchar(50) DEFAULT NULL,
+  `modified_by` varchar(50) DEFAULT NULL,
+  PRIMARY KEY (`druid_ingestion_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Table for storing Druid ingestion specific data.';
+/*!40101 SET character_set_client = @saved_cs_client */;

@@ -1,0 +1,11 @@
+USE `catalog`;
+
+--
+-- Dumping data for table `rule_sql_definition`
+--
+
+LOCK TABLES `rule_sql_definition` WRITE;
+/*!40000 ALTER TABLE `rule_sql_definition` DISABLE KEYS */;
+INSERT INTO `rule_sql_definition` VALUES ('ruledefinition_1513075135','Null Check','SELECT _primaryKey as uniqueId,current_timestamp() AS SysTime,\'_viewName\' AS ViewName,epochTime_Path as EpochMillisUTC,clientId_Path as ClientId,\'+_columnKey+\'  AS Column,\'IS NULL\' AS RuleName FROM viewName WHERE  _columnPath IS NULL','_primarykey, _client ,_columnKey ',1,1513075135,1513075135,'Manual','Manual'),('ruledefinition_1513075136','Count Check','','',1,1513075136,1513075136,'Manual','Manual'),('ruledefinition_1513075137','Duplicate Check','','',1,1513075137,1513075137,'Manual','Manual'),('ruledefinition_1513075138','Search','','',1,1513075138,1513075138,'Manual','Manual'),('ruledefinition_1513075139','Null Check With Condition','SELECT _primaryKey as uniqueId,current_timestamp() AS SysTime,\'_viewName\' AS ViewName,epochTime_Path as EpochMillisUTC,clientId_Path as ClientId,\'+_columnKey+\'  AS Column,\'IS NULL\' AS RuleName FROM _viewName WHERE  _columnPath IS NULL','_primarykey, _client ,_conition,_columnKey',1,NULL,NULL,NULL,NULL);
+/*!40000 ALTER TABLE `rule_sql_definition` ENABLE KEYS */;
+UNLOCK TABLES;

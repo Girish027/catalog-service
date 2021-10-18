@@ -1,0 +1,24 @@
+1.  ALTER TABLE `catalog`.`view_output_granularity`
+    ADD COLUMN `cron_string` VARCHAR(45) NULL AFTER `reference_time_min`,
+    ADD COLUMN `is_active` TINYINT(4) NULL AFTER `cron_string`;
+
+2.  UPDATE view_output_granularity SET cron_string =(SELECT vi.cron_string FROM view_information vi
+    WHERE vi.view_id = view_output_granularity.view_id);
+
+3.  UPDATE view_output_granularity SET view_output_granularity.is_active = 1;
+
+4.  ALTER TABLE `catalog`.`view_information` DROP COLUMN `cron_string`;
+
+5.  UPDATE catalog.view_output_granularity SET reference_time_min = '-120' WHERE output_id = 'view_output_gran_1515000004';
+
+6.  UPDATE catalog.view_output_granularity SET is_active = 0 WHERE final_view_id != 'viewinfo_1515000000';
+
+7.  UPDATE catalog.view_information SET schedule_start_time= '1526515200000' WHERE view_id = 'viewinfo_1515000000';
+
+8.  UPDATE catalog.view_output_granularity SET cron_string = '0 * * * *' WHERE output_id = 'view_output_gran_1515000004';
+
+9.  UPDATE catalog.view_source SET data_range_start_min= '-360', data_range_end_min= '480' WHERE source_id='Source_1515000000';
+
+10. UPDATE catalog.view_source SET data_range_start_min= '-360', data_range_end_min= '480' WHERE source_id='Source_1515000001';
+
+11. UPDATE catalog.view_output_granularity SET reference_time_min = -120 WHERE final_view_id = 'viewinfo_1515000000';

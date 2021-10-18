@@ -1,0 +1,11 @@
+USE `catalog`;
+
+--
+-- Dumping data for table `rule_type_info`
+--
+
+LOCK TABLES `rule_type_info` WRITE;
+/*!40000 ALTER TABLE `rule_type_info` DISABLE KEYS */;
+INSERT INTO `rule_type_info` VALUES ('ruletype_1513074594','template','',1513074594,1513074594,'Manual','Manual'),('ruletype_1513074595','script','',1513074594,1513074594,'Manual','Manual');
+/*!40000 ALTER TABLE `rule_type_info` ENABLE KEYS */;
+UNLOCK TABLES;

@@ -1,0 +1,24 @@
+USE `catalog`;
+
+
+--
+-- Table structure for table `client_information`
+--
+
+DROP TABLE IF EXISTS `client_information`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `client_information` (
+  `info_id` varchar(50) NOT NULL,
+  `parent_info_id` varchar(50) DEFAULT NULL,
+  `info_type` varchar(50) DEFAULT NULL,
+  `info_name` varchar(50) DEFAULT NULL,
+  `info_display_name` varchar(50) DEFAULT NULL,
+  `last_node_flag` tinyint(4) DEFAULT NULL,
+  `created_unixtimestamps` bigint(13) DEFAULT NULL,
+  `modified_unixtimestamps` bigint(13) DEFAULT NULL,
+  `created_by` varchar(50) DEFAULT NULL,
+  `modified_by` varchar(50) DEFAULT NULL,
+  PRIMARY KEY (`info_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;

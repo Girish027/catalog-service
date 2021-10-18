@@ -1,0 +1,11 @@
+USE `catalog`;
+
+--
+-- Dumping data for table `view_layer`
+--
+
+LOCK TABLES `view_layer` WRITE;
+/*!40000 ALTER TABLE `view_layer` DISABLE KEYS */;
+INSERT INTO `view_layer` VALUES ('Layer0_1513089091','Layer 0','Raw data (HDFS currently, can be others)',1513089091),('Layer1_1513089092','Layer 1','SQL Tables on Raw DATA as is',1513089092),('Layer2_1513089093','Layer 2','Business specific, common entities understood in the same way across org',1513089093),('Layer3_1513089094','Layer 3','Consumer or Team or Use case specific table definition',1513089094),('Layer4_1513089095','Layer 4','The materialization layer, if required for interactive query. This schema would be specific to the store like Druid or Elastic',1513089095);
+/*!40000 ALTER TABLE `view_layer` ENABLE KEYS */;
+UNLOCK TABLES;

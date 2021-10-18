@@ -1,0 +1,37 @@
+USE `catalog`;
+
+--
+-- Table structure for table `view_information`
+--
+
+DROP TABLE IF EXISTS `view_information`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `view_information` (
+  `view_id` varchar(50) NOT NULL,
+  `view_name` varchar(50) DEFAULT NULL,
+  `view_description` varchar(150) DEFAULT NULL,
+  `layer_id` varchar(50) DEFAULT NULL,
+  `definition_id` varchar(50) DEFAULT NULL,
+  `owner` varchar(50) DEFAULT NULL,
+  `view_type` varchar(50) DEFAULT NULL,
+  `ttl_days` int(11) DEFAULT NULL,
+  `is_active` tinyint(4) DEFAULT NULL,
+  `es_index_enabled` tinyint(4) DEFAULT NULL,
+  `druid_index_enabled` tinyint(4) DEFAULT NULL,
+  `cron_string` varchar(50) DEFAULT NULL,
+  `schedule_start_time` bigint(13) DEFAULT NULL,
+  `schedule_end_time` bigint(13) DEFAULT NULL,
+  `complexity` varchar(15) DEFAULT NULL,
+  `view_output_path` varchar(500) DEFAULT NULL,
+  `format` varchar(50) DEFAULT NULL,
+  `time_dimension_column_id` varchar(50) DEFAULT NULL,
+  `created_unixtimestamps` bigint(13) DEFAULT NULL,
+  `modified_unixtimestamps` bigint(13) DEFAULT NULL,
+  `created_by` varchar(50) DEFAULT NULL,
+  `modified_by` varchar(50) DEFAULT NULL,
+  `is_dq` tinyint(4) DEFAULT NULL,
+  `is_dynamicsql` tinyint(4) DEFAULT NULL,
+  PRIMARY KEY (`view_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;

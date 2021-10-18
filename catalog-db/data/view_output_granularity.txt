@@ -1,0 +1,18 @@
+USE `catalog`;
+
+--
+-- Dumping data for table `view_output_granularity`
+--
+
+LOCK TABLES `view_output_granularity` WRITE;
+/*!40000 ALTER TABLE `view_output_granularity` DISABLE KEYS */;
+INSERT INTO `view_output_granularity`(output_id,view_id,client_info_id,final_view_id,client_HDFS_folder_id,
+output_path,granularity,granularity_in_min,reference_time_min,weekend_enabled,
+created_unixtimestamps,modified_unixtimestamps,created_by,modified_by,
+sla_breach_time,owner,owner_email_id) VALUES
+('view_output_gran_1513093670','viewinfo_1513089751','client_info_1513077756','viewinfo_1513089751','client_info_1513077756',
+'','Hourly',60,-60,0,
+1513093670,1513093670,'Manual','Manual',
+1,'DP2','dataplat.ai');
+/*!40000 ALTER TABLE `view_output_granularity` ENABLE KEYS */;
+UNLOCK TABLES;

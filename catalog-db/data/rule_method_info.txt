@@ -1,0 +1,10 @@
+USE `catalog`;
+
+--
+-- Dumping data for table `rule_method_info`
+--
+
+LOCK TABLES `rule_method_info` WRITE;
+/*!40000 ALTER TABLE `rule_method_info` DISABLE KEYS */;
+/*!40000 ALTER TABLE `rule_method_info` ENABLE KEYS */;
+UNLOCK TABLES;

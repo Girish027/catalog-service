@@ -1,0 +1,11 @@
+USE `catalog`;
+
+--
+-- Dumping data for table `druid_ingestion_data`
+--
+
+LOCK TABLES `druid_ingestion_data` WRITE;
+/*!40000 ALTER TABLE `druid_ingestion_data` DISABLE KEYS */;
+INSERT INTO `druid_ingestion_data` VALUES ('hadoopyString','druid_1515000000','viewinfo_1515000000','index_hadoop','hadoop','NONE','HOUR','uniform','static','auto','json',1522758186000,1522758186000,'Emil','Emil'),('hadoopyString','druid_80055b7e-f8b9-4884-aa5f-0f94905a38b7','view_f4cd503a-bda3-4445-9501-91349f9e628f','index_hadoop','hadoop','NONE','HOUR','uniform','static','auto','json',1521793652608,1521793652608,'System','System'),('hadoopyString','druid_f50388f4-e60a-4999-a06b-d0b517d60133','view_a5e4c22a-8a79-432f-a74b-a52f8b67a510','index_hadoop','hadoop','NONE','HOUR','uniform','static','auto','json',1521793875470,1521793875470,'System','System'),('hadoopyString','dr_7676767600','viewinfo_1513089758','index_hadoop','hadoop','NONE','HOUR','uniform','static','auto','json',1503338400000,1503338400000,'sys','sys'),('hadoopyString','dr_7676767601','viewinfo_1513090000','index_hadoop','hadoop','NONE','HOUR','uniform','static','auto','json',1503338400000,1503338400000,'sys','sys');
+/*!40000 ALTER TABLE `druid_ingestion_data` ENABLE KEYS */;
+UNLOCK TABLES;

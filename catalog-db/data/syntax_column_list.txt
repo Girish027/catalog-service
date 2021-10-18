@@ -1,0 +1,10 @@
+USE `catalog`;
+
+--
+-- Dumping data for table `syntax_column_list`
+--
+
+LOCK TABLES `syntax_column_list` WRITE;
+/*!40000 ALTER TABLE `syntax_column_list` DISABLE KEYS */;
+/*!40000 ALTER TABLE `syntax_column_list` ENABLE KEYS */;
+UNLOCK TABLES;

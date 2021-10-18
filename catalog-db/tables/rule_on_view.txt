@@ -1,0 +1,27 @@
+USE `catalog`;
+
+--
+-- Table structure for table `rule_on_view`
+--
+
+DROP TABLE IF EXISTS `rule_on_view`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `rule_on_view` (
+  `rule_on_view_id` varchar(50) NOT NULL,
+  `dq_view_id` varchar(45) DEFAULT NULL,
+  `view_id` varchar(50) DEFAULT NULL,
+  `rule_type_id` varchar(50) DEFAULT NULL,
+  `rule_id` varchar(50) DEFAULT NULL,
+  `rule_definition_id` varchar(50) DEFAULT NULL,
+  `order` tinyint(4) DEFAULT NULL,
+  `view_column_id` varchar(50) DEFAULT NULL,
+  `is_active` tinyint(4) DEFAULT NULL,
+  `rule_execution_time` varchar(50) DEFAULT NULL,
+  `created_unixtimestamps` bigint(13) DEFAULT NULL,
+  `modified_unixtimestamps` bigint(13) DEFAULT NULL,
+  `created_by` varchar(50) DEFAULT NULL,
+  `modified_by` varchar(50) DEFAULT NULL,
+  PRIMARY KEY (`rule_on_view_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;

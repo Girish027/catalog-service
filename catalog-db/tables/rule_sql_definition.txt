@@ -1,0 +1,22 @@
+USE `catalog`;
+
+--
+-- Table structure for table `rule_sql_definition`
+--
+
+DROP TABLE IF EXISTS `rule_sql_definition`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `rule_sql_definition` (
+  `rule_definition_id` varchar(50) NOT NULL,
+  `rule_definition_name` varchar(50) DEFAULT NULL,
+  `sql_definition` longtext,
+  `column_list` varchar(50) DEFAULT NULL,
+  `is_editable` tinyint(4) DEFAULT NULL,
+  `created_unixtimestamps` bigint(13) DEFAULT NULL,
+  `modified_unixtimestamps` bigint(13) DEFAULT NULL,
+  `created_by` varchar(50) DEFAULT NULL,
+  `modified_by` varchar(50) DEFAULT NULL,
+  PRIMARY KEY (`rule_definition_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;

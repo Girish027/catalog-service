@@ -1,0 +1,11 @@
+USE `catalog`;
+
+--
+-- Dumping data for table `rule_on_view`
+--
+
+LOCK TABLES `rule_on_view` WRITE;
+/*!40000 ALTER TABLE `rule_on_view` DISABLE KEYS */;
+INSERT INTO `rule_on_view` VALUES ('ruleview_1513076630',NULL,'viewinfo_1513089730','ruletype_1513074594','','ruledefinition_1513075135',1,'view_column_1513077915',1,'',1513076630,1513076630,'Manual','Manual'),('ruleview_1513076631',NULL,'viewinfo_1513089730','ruletype_1513074594','','ruledefinition_1513075135',1,'view_column_1513077916',1,'',1513076631,1513076631,'Manual','Manual'),('ruleview_1513076632',NULL,'viewinfo_1513089730','ruletype_1513074594','','ruledefinition_1513075135',1,'view_column_1513077917',1,'',1513076632,1513076632,'Manual','Manual'),('ruleview_1513076633',NULL,'viewinfo_1513089730','ruletype_1513074594','','ruledefinition_1513075135',1,'view_column_1513077922',1,'',1513076633,1513076633,'Manual','Manual'),('ruleview_1513076634','viewinfo_1513089757','viewinfo_1513089727','ruletype_1513074594',NULL,'ruledefinition_1513075139',1,'view_column_1513078059',1,NULL,NULL,NULL,NULL,NULL),('ruleview_1513076635','viewinfo_1513089757','viewinfo_1513089727','ruletype_1513074594',NULL,'ruledefinition_1513075139',1,'view_column_1513078061',1,NULL,NULL,NULL,NULL,NULL),('ruleview_1513076636','viewinfo_1513089757','viewinfo_1513089727','ruletype_1513074594',NULL,'ruledefinition_1513075139',1,'view_column_1513078063',1,NULL,NULL,NULL,NULL,NULL),('ruleview_1513076637','viewinfo_1513089757','viewinfo_1513089727','ruletype_1513074594',NULL,'ruledefinition_1513075139',1,'view_column_1513078064',1,NULL,NULL,NULL,NULL,NULL),('ruleview_1513076638','viewinfo_1514090000','viewinfo_1513090000','ruletype_1513074594',NULL,'ruledefinition_1513075135',1,'view_column_1514090003',1,'',1513076633,1513076633,'sys','sys'),('ruleview_33307bc6-808e-44b2-9d51-49264cc02178',NULL,'viewinfo_1513089727','ruletype_1513074594',NULL,'ruledefinition_1513075135',0,'view_column_4300000001',0,NULL,0,0,'Sys','Sys');
+/*!40000 ALTER TABLE `rule_on_view` ENABLE KEYS */;
+UNLOCK TABLES;

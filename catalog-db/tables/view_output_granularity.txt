@@ -1,0 +1,30 @@
+USE `catalog`;
+
+--
+-- Table structure for table `view_output_granularity`
+--
+
+DROP TABLE IF EXISTS `view_output_granularity`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `view_output_granularity` (
+  `output_id` varchar(50) NOT NULL,
+  `view_id` varchar(50) DEFAULT NULL,
+  `client_info_id` varchar(50) DEFAULT NULL,
+  `final_view_id` varchar(50) DEFAULT NULL,
+  `client_HDFS_folder_id` varchar(500) DEFAULT NULL,
+  `output_path` varchar(2500) DEFAULT NULL,
+  `granularity` varchar(45) DEFAULT NULL,
+  `granularity_in_min` bigint(13) DEFAULT '0',
+  `reference_time_min` int(11) DEFAULT NULL,
+  `weekend_enabled` int(11) DEFAULT NULL,
+  `created_unixtimestamps` bigint(13) DEFAULT NULL,
+  `modified_unixtimestamps` bigint(13) DEFAULT NULL,
+  `created_by` varchar(45) DEFAULT NULL,
+  `modified_by` varchar(45) DEFAULT NULL,
+  `sla_breach_time` INT DEFAULT -1,
+  `owner` VARCHAR(100),
+  `owner_email_id` VARCHAR(100),
+  PRIMARY KEY (`output_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;

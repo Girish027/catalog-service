@@ -1,0 +1,37 @@
+USE `catalog`;
+
+--
+-- Table structure for table `view_column_definition`
+--
+
+DROP TABLE IF EXISTS `view_column_definition`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `view_column_definition` (
+  `column_id` varchar(50) NOT NULL,
+  `definition_id` varchar(50) DEFAULT NULL,
+  `column_name` varchar(250) DEFAULT NULL,
+  `column_display_name` varchar(50) DEFAULT NULL,
+  `column_description` varchar(250) DEFAULT NULL,
+  `view_id` varchar(50) DEFAULT NULL,
+  `column_path` varchar(500) DEFAULT NULL,
+  `column_source` varchar(150) DEFAULT NULL,
+  `data_type` varchar(50) DEFAULT NULL,
+  `data_length` varchar(50) DEFAULT NULL,
+  `is_dimension` tinyint(4) DEFAULT NULL,
+  `is_metrics` tinyint(4) DEFAULT '0',
+  `aggregation_type` varchar(40) DEFAULT NULL,
+  `unique_key_flag` tinyint(4) DEFAULT NULL,
+  `unique_key_order` tinyint(4) DEFAULT NULL,
+  `column_identifier` int(11) DEFAULT NULL,
+  `is_derived_column` tinyint(4) DEFAULT NULL,
+  `derived_syntax` varchar(500) DEFAULT NULL,
+  `index_set` int(11) DEFAULT NULL,
+  `index_order` int(11) DEFAULT NULL,
+  `created_unixtimestamps` bigint(13) DEFAULT NULL,
+  `modified_unixtimestamps` bigint(13) DEFAULT NULL,
+  `created_by` varchar(50) DEFAULT NULL,
+  `modified_by` varchar(50) DEFAULT NULL,
+  PRIMARY KEY (`column_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
